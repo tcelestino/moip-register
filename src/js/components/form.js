@@ -4,11 +4,11 @@ Moip.Forms = (function () {
 
   var component = {
 
-    initialize: function (input) {
-      this.inputs = input;
-      var values = this.serialize(this.inputs);
-      console.log(values);
-      //this.sendData(values);
+    initialize: function (form) {
+      this.form = form;
+      this.success = document.querySelector('.success');
+      this.inputs = this.form.elements;
+      this.sendData(this.serialize(this.inputs));
     },
 
     ajax: function () {
@@ -56,7 +56,9 @@ Moip.Forms = (function () {
     stateRequest: function () {
       if (this.readyState === 4) {
         if (this.status === 201) {
-          console.log('Passou!');
+          component.form.classList.add('hide');
+          component.success.classList.remove('hide');
+          component.success.classList.add('show');
         }
       }
     },
