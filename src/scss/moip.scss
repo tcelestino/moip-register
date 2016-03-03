@@ -307,7 +307,6 @@ input:-moz-placeholder {
 @include breakpoint(from-desktop) {
   body {
     background-position: inherit;
-    background-size: auto;
   }
   .wrap {
     @include container-width($grid-desktop);
