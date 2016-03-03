@@ -1,0 +1,34 @@
+@mixin loginaccount {
+  .login-account {
+    align-items: center;
+    span {
+      margin-right: 10px;
+    }
+  }
+}
+
+@mixin clearfix {
+  zoom:1;
+  &:before, &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// image replacement
+@mixin img-replace {
+  text-indent: -99999px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+}
+
+// convert px to em
+@function em($px, $base: 16px) {
+  @return ($px / $base) * 1em;
+}

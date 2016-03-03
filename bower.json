@@ -1,0 +1,26 @@
+{
+  "name": "moip-register",
+  "description": "create your account in Moip",
+  "main": "index.js",
+  "authors": [
+    "Tiago Celestino"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "moip"
+  ],
+  "moduleType": [],
+  "homepage": "http://github.com/tcelestino/moip-register",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "lodash": "^4.5.1",
+    "neutroncss": "^0.9.2"
+  }
+}

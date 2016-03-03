@@ -1,0 +1,8 @@
+node_modules/
+*.log
+www/*
+src/css/*
+src/scss/_sprite.scss
+src/images/sprite.png
+src/components/*
+.DS_Store

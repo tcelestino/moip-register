@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="description"  content="Único contrato, única integração. Todos os meios de pagamento e gestão de riscos e fraudes. Aumente a conversão de vendas em 30% com o checkout transparente." />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+  <!-- build:css css/app.css -->
+    <link rel="stylesheet" href="/css/moip.css" type="text/css">
+  <!-- endbuild -->
+  <title>Faça seu Cadastro - Moip</title>
+</head>
+<body>
+
+  <div class="wrap">
+    <header class="top">
+      <a href="http://moip.com.br" title="Moip - Feito para seu negócios" class="logo">
+        <img src="/images/logo.png" alt="moip" />
+      </a>
+      <div class="login-account">
+        <span>Já tem conta?</span>
+        <a href="#login" class="btn btn-login">Entrar</a>
+      </div>
+    </header>
+    <div class="headline">
+      <h2>Mais fácil ainda,</h2>
+      <span>Só precisamos de algumas informações</span>
+    </div>
+    <section class="create-account">
+      <section class="create-account-social">
+        <ul class="social-logins">
+          <li class="social-login-facebook"><a href="#" title="Login com o Facebook" class="icon">Log in with Facebook</a></li>
+          <li class="social-login-google"><a href="#" title="Entrar com sua conta Google" class="icon">Sign in with Google</a></li>
+        </ul>
+        <aside>
+          <p>Fique tranquilo, não vamos usar seus dados, nem fazer publicações em seu nome!</p>
+          <p><small>Ao usar o Facebook ou o Google, você concorda com os nossos <a href="#termos">termos de uso</a></small></p>
+        </aside>
+      </section>
+      <div class="divisor">
+        <span>ou</span>
+      </div>
+      <section class="create-account-form">
+        <form action="#" method="post" name="create-account" class="form">
+          <fieldset>
+            <div class="form-field">
+              <label for="name">Nome completo</label>
+              <input type="text" name="name" id="name" placeholder="Nome completo" aria-labelledby="name" required>
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" placeholder="Email" aria-labelledby="email" required>
+            </div>
+            <div class="form-field id-field">
+              <label for="cpf">CPF</label>
+              <input type="text" name="cpf" id="cpf" placeholder="CPF" aria-labelledby="cpf" max="12" min="12" required>
+            </div>
+            <div class="form-field cel-field">
+              <label for="cel">Celular</label>
+              <input type="tel" name="cel" id="cel" placeholder="Celular" aria-labelledby="cel">
+            </div>
+            <div class="form-field pass-field">
+              <label for="pass">Senha</label>
+              <input type="password" name="pass" id="pass" placeholder="Senha" aria-labelledby="pass" required>
+            </div>
+            <div class="form-field okpass-field">
+              <label for="passok">Confirme sua senha</label>
+              <input type="password" name="passok" id="passok" placeholder="Confirme sua senha" aria-labelledby="passok" required>
+            </div>
+            <div class="form-field is-checkbox">
+              <input type="checkbox" name="agree" id="agree" required>
+              <label for="agree">
+              Li e concordo com os <a href="#">termos de uso</a></label>
+            </div>
+            <button type="submit" class="btn btn-join">Cadastrar</button>
+          </fieldset>
+        </form>
+      </section>
+    </section>
+  </div>
+  <!-- build:js js/app.js -->
+    <script src="/components/lodash/dist/lodash.js"></script>
+    <script src="/js/components/form.js"></script>
+    <script src="/js/app.js"></script>
+  <!-- endbuild -->
+</body>
+</html>

@@ -1,0 +1,394 @@
+@import "../components/neutroncss/neutron";
+@import "vars";
+@import "mixins";
+@import "sprite";
+
+body {
+  background: url('../images/bg.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: $white;
+  font: $font-size $font-family;
+}
+
+img {
+  max-width: 100%;
+  outline: none;
+}
+h1, h2, h3, h4, ul, ol, dl, fieldset {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: $white;
+  text-decoration: none;
+}
+
+fieldset {
+  border: 0;
+}
+input {
+  outline: none;
+}
+
+input::-webkit-input-placeholder {
+  color: $white;
+}
+input::-moz-placeholder {
+  color: $white;
+  opacity: 1;
+}
+input:-ms-input-placeholder {
+  color: $white;
+}
+input:-moz-placeholder {
+  color: $white;
+}
+
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  left: -9999px;
+  position: absolute;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  cursor: pointer;
+  padding-left: 25px;
+  position: relative;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  background: transparent;
+  border-radius: 4px;
+  border: 1px solid $white;
+  content: '';
+  height: 17px;
+  left:0; top: 2px;
+  position: absolute;
+  width: 17px;
+}
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  color: $white;
+  content: 'x';
+  font-size: 18px;
+  left: 5px;
+  line-height: 0.8;
+  position: absolute;
+  top: 3px;
+  transition: all .2s;
+}
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 1px solid $white;
+}
+
+.btn {
+  display: block;
+  width: auto;
+}
+
+.is-disabled {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.form {
+  width: 100%;
+  button {
+    border: 0;
+    cursor: pointer;
+  }
+}
+.form-field {
+  margin-bottom: 10px;
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"],
+  input[type="checkbox"],
+  button[type="submit"] {
+    color: $white;
+    font-family: $font-family;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"],
+  input[type="checkbox"] {
+    background: transparent;
+    border: 1px solid $white;
+    border-radius: 4px;
+    font-size: em(17px);
+    padding: 5px;
+  }
+  &.is-checkbox {
+    label {
+      display: block;
+    }
+  }
+  a {
+    color: $blue;
+  }
+}
+.wrap {
+  @include columns((1), $container-width: 100%);
+  padding: 0 10px;
+}
+.top {
+  @include column(2);
+  .login-account {
+    display: flex;
+    justify-content: flex-end;
+    span {
+      @include hide(mobile);
+      color: $white;
+    }
+  }
+  .btn-login {
+    border-radius: 5px;
+    border: 1px solid $white;
+    height: 51px;
+    padding-top: 13px;
+    text-align: center;
+    width: 85px;
+  }
+}
+.headline {
+  @include column(1);
+  padding: 20px 0;
+  text-align: center;
+  h2 {
+    font-size: em(27px);
+    font-weight: 700;
+  }
+  span {
+    font-size: em(24px);
+    font-weight: 300;
+  }
+}
+.create-account {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.create-account-social {
+  aside {
+    @include hide(mobile);
+    @include hide(phablet);
+    @include hide(tablet);
+  }
+}
+.social-logins {
+  list-style: none;
+  margin: 0 auto;
+  width: 212px;
+  li {
+    display: inline-block;
+  }
+  a {
+    @include img-replace;
+  }
+  .social-login-facebook a {
+    @include sprite($facebook);
+  }
+  .social-login-google {
+    float: right;
+    a {
+      @include sprite($google-plus);
+    }
+  }
+}
+.divisor {
+  margin: 20px 0;
+  position: relative;
+  text-align: center;
+  span {
+    font-size: em(17px);
+    font-weight: bold;
+  }
+  &:before,
+  &:after {
+    content: '';
+    border-top: 1px solid $white;
+    height: 10px;
+    position: absolute;
+    top: 60%;
+    width: 40%;
+    z-index: 5
+  }
+  &:before {
+    left: 0;
+  }
+  &:after {
+    right: 0;
+  }
+}
+.create-account-form {
+  label, input[type="tel"] {
+    display: none;
+  }
+  input[name="name"],
+  input[name="email"],
+  button[type="submit"] {
+    width: 100%;
+  }
+  input[name="cpf"],
+  input[name="cel"] {
+    margin-bottom: 20px;
+    width: 182px;
+  }
+  input[type="password"] {
+    width: 225px;
+  }
+  button[type="submit"] {
+    background: $blue;
+    border-radius: 6px;
+    padding: 15px;
+    text-align: center;
+    font-size: em(23px);
+    color: $white;
+  }
+  .is-checkbox {
+    margin: 10px 0;
+    label {
+      font-size: em(14px);
+      font-weight: 300;
+    }
+  }
+}
+@include breakpoint(from-phablet) {
+  .top {
+    @include loginaccount;
+  }
+}
+@include breakpoint(from-tablet) {
+  .top {
+    @include loginaccount;
+  }
+}
+@include breakpoint(from-desktop) {
+  body {
+    background-position: inherit;
+    background-size: auto;
+  }
+  .wrap {
+    @include container-width($grid-desktop);
+    padding: 0;
+  }
+  .top {
+    @include loginaccount;
+    .btn-login {
+      width: 163px;
+    }
+  }
+  .headline h2 {
+    font-size: em(33px);
+  }
+  .create-account {
+    flex-direction: row;
+    margin-top: 20px;
+  }
+  .create-account-social {
+    box-sizing: border-box;
+    padding: 60px 0 0 50px;
+    width: 400px;
+    aside {
+      width: 300px;
+    }
+    aside p {
+      font-size: em(18px);
+      font-weight: 300;
+    }
+    aside small {
+      font-size: em(14px);
+    }
+    aside a {
+      color: $blue;
+    }
+  }
+  .social-logins {
+    margin: 0;
+    width: 300px;
+    li {
+      display: block;
+    }
+    .social-login-facebook a {
+      @include sprite($facebook-desktop);
+    }
+    .social-login-google {
+      float: none;
+      a {
+        @include sprite($google-plus-desktop);
+        margin: 0 auto;
+      }
+    }
+  }
+  .create-account-form {
+    width: 464px;
+    input[type="tel"] {
+      display: block;
+    }
+    input[type="password"] {
+      width: 200px;
+    }
+    .btn-join {
+      margin-top: 30px;
+    }
+    .id-field,
+    .pass-field,
+    .is-checkbox,
+    .btn-join {
+      float: left;
+    }
+    .cel-field,
+    .okpass-field {
+      float: right;
+    }
+    .pass-field,
+    .okpass-field {
+      margin: 10px 0 0;
+    }
+  }
+  .divisor {
+    margin: 0 20px;
+    padding-top: 160px;
+    &:before,
+    &:after {
+      border-top: 0;
+      border-left: 1px solid $white;
+      height: 130px;
+    }
+    &:before {
+      top: 0;
+      left: inherit;
+      right: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+  }
+  .form-field {
+    @include clearfix;
+  }
+}
+@include breakpoint(from-desktop-lrg) {
+  body {
+    width: 100%;
+    background-size: cover;
+  }
+  .headline {
+    margin-top: 150px;
+  }
+}
