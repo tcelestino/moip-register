@@ -53,6 +53,7 @@ $ gulp build
 
 ## TODO
 
+- [ ] Sign with social accounts
 - [ ] Validate forms
 - [ ] Page Success
 - [ ] Test
