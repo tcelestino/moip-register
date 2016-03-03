@@ -7,20 +7,13 @@ Moip.Forms = (function () {
     initialize: function (input) {
       this.inputs = input;
       var values = this.serialize(this.inputs);
-      this.events();
-      this.sendData(values);
+      console.log(values);
+      //this.sendData(values);
     },
 
     ajax: function () {
       return new XMLHttpRequest();
     },
-
-    events: function () {
-      this.fields.agree.addEventListener('click', function (evt) {
-        console.log(evt);
-      }, false);
-    },
-
 
     serialize: function (field) {
       var name = this.splitData(field.name.value, ' ');
@@ -40,7 +33,7 @@ Moip.Forms = (function () {
           'phone': {
             'countryCode': phone[0],
             'areaCode': phone[1],
-            'number': phone[2]
+            'number': phone[2] + phone[3]
           }
         },
         'type': 'MERCHANT'
