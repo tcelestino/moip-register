@@ -55,6 +55,7 @@
   "node": true,
   "globals": {
     "Moip": true,
-    "_": true
+    "_": true,
+    "VMasker": true
   }
 }
