@@ -16,11 +16,9 @@
   "author": "Tiago Celestino",
   "license": "ISC",
   "devDependencies": {
-    "babel-preset-es2015": "^6.5.0",
     "browser-sync": "^2.11.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
-    "gulp-babel": "^6.1.2",
     "gulp-cssmin": "^0.1.7",
     "gulp-if": "^2.0.0",
     "gulp-imagemin": "^2.4.0",
