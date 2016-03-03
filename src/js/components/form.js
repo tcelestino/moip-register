@@ -46,9 +46,7 @@ Moip.Forms = (function () {
 
       request.open('POST', url);
       request.setRequestHeader('Content-Type', 'application/json');
-
       request.onreadystatechange = this.stateRequest;
-
       request.send(JSON.stringify(data));
 
     },
