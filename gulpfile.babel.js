@@ -65,7 +65,7 @@ gulp.task('prefixer', () => {
         browsers: ['last 2 versions'],
         cascade: false
       }))
-    .pipe(gulp.dest(SOURCE.css));
+    .pipe(gulp.dest('src/css'));
 });
 
 gulp.task('clean:css', (cb) => {
