@@ -35,7 +35,6 @@ $ gulp build
   * neutroncss
 * [gulp](http://gulpjs.com/)
   * gulp-autoprefixer
-  * gulp-babel
   * gulp-cssmin
   * gulp-if
   * gulp-imagemin
@@ -45,7 +44,6 @@ $ gulp build
   * gulp-useref
 * rimraf
 * browser-sync
-* babel-preset-es2015
 
 ## Dependencies
   * sprity
