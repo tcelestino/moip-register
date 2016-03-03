@@ -104,6 +104,13 @@ input:-moz-placeholder {
   cursor: pointer;
 }
 
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+
 .form {
   width: 100%;
   button {
@@ -112,6 +119,22 @@ input:-moz-placeholder {
   }
   legend {
     display: none;
+  }
+}
+.success {
+  height: 340px;
+  text-align: center;
+  &.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  span {
+    display: block;
+    font-size: em(20px);
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
   }
 }
 .form-field {
