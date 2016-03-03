@@ -1,4 +1,5 @@
 # Moip Register
+[![Build Status](https://travis-ci.org/tcelestino/moip-register.svg?branch=master)](https://travis-ci.org/tcelestino/moip-register)
 
 This is a test for Moip Register page.
 
